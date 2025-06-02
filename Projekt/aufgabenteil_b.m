@@ -1,31 +1,29 @@
-% Graubild laden
-grauBild = imread('stuttgart_grau.png');
+% Datei: evenisiere_graubild.m
+% Liest ein Graubild ein und rundet alle Grauwerte auf den nächstniedrigeren geraden Wert.
 
-% Sicherstellen, dass es ein Graustufenbild ist
-if size(grauBild, 3) == 3
-    grauBild = rgb2gray(grauBild);
-end
+% 1. Originales Graubild einlesen
+I_orig = imread('stuttgart_grau.png');  % vorausgesetzt: 8-Bit-Graubild
 
-% Neues Bild mit nur geraden Grau-Werten erstellen
-grauBild_gerade = bitand(grauBild, uint8(254));  % maskiert das niederwertigste Bit
+% 2. 'Evenisieren': Alle Pixel auf den nächstniedrigeren geraden Wert runden
+I_gerade = uint8(floor(double(I_orig) / 2) * 2);
 
-% Histogramme vergleichen
+% 3. Histogramm: Original vs. gerade-Version
 figure;
+hold on;
+histogram(I_orig(:), 0:255, 'FaceColor', [0.5 0.5 0.5], ...
+          'EdgeColor', 'none', 'Normalization', 'probability');
+histogram(I_gerade(:), 0:255, 'FaceColor', [0.0 0.7 0.0], ...
+          'EdgeColor', 'none', 'Normalization', 'probability');
+hold off;
+xlim([-1 256]);
+xlabel('Grauwert');
+ylabel('Relative Häufigkeit');
+title('Histogramm: Original vs. Gerade-Graubild');
+legend('Original', 'Nur gerade Grauwerte');
 
-subplot(2,1,1);
-imhist(grauBild);
-title('Histogramm des Original-Graubilds');
-
-subplot(2,1,2);
-imhist(grauBild_gerade);
-title('Histogramm des Graubild\_gerade (nur gerade Grauwerte)');
-
-% Anzeige beider Bilder nebeneinander
+% 4. Visueller Vergleich beider Bilder
 figure;
-subplot(1,2,1);
-imshow(grauBild);
-title('Originalbild');
-
-subplot(1,2,2);
-imshow(grauBild_gerade);
-title('Graubild mit nur geraden Werten');
+subplot(1,2,1); imshow(I_orig);
+title('Original „stuttgart\_grau.png“');
+subplot(1,2,2); imshow(I_gerade);
+title('Graubild nur gerade Grauwerte');
