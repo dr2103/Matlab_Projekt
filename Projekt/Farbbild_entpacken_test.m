@@ -1,4 +1,4 @@
-% Datei: Farbbild_entpacken_test.m
+% Aufgabenteil j)
 % Testet die Funktion BVfkt_Farbbild_entpacken an dem selbst erzeugten
 % ‚Farbbild_mit_Info.png‘ und vergleicht mit den Original-Binärbildern.
 

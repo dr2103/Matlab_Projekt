@@ -1,4 +1,4 @@
-% Datei: BVfkt_Graubild_entpacken.m
+% Aufgabenteil d)
 % Funktion, die aus einem Graubild (mit LSB-basiert verstecktem Binärbild) das Binärbild extrahiert.
 
 function B_extrahiert = BVfkt_Graubild_entpacken(I_graubild_mit_info)

@@ -1,4 +1,4 @@
-% Datei: Graubild_laden_entpacken.m
+% Aufgabenteil d)
 % Skript, das ein Graubild mit verstecktem Binärbild lädt und das Binärbild extrahiert.
 
 % 1. Graubild mit eingebetteter Info laden

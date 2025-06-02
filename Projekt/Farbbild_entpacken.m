@@ -1,4 +1,4 @@
-% Datei: Farbbild_entpacken_stuttgart123.m
+% Aufgabenteil k)
 % Liest das in der Aufgabenstellung bereitgestellte Farbfoto „stuttgart123.png“
 % ein und extrahiert die drei dort versteckten Binärbilder.
 

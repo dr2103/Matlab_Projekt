@@ -1,4 +1,4 @@
-% Datei: BVfkt_Farbbild_entpacken.m
+% Aufgabenteil i)
 % Funktion, die aus einem Farbbild (mit LSB-basiert versteckten Binärbildern in R, G, B)
 % die drei Binärbilder extrahiert.
 
