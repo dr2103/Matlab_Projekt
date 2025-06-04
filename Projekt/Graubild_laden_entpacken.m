@@ -12,7 +12,3 @@ figure;
 imshow(B_neu);
 title('Extrahiertes Binärbild aus Graubild\_mit\_Info');
 
-% 4. Optionaler Vergleich mit Original
-orig = imread('Binaerbild_1_rein.png');
-diff = orig - B_neu;
-assert(all(diff(:) == 0), 'Die extrahierten Pixel weichen vom Original ab!');

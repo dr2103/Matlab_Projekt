@@ -1,4 +1,3 @@
-% Datei: embedding_farbbild.m
 % Liest ein Farbbild, „evenisiert“ die Farbkanäle (nur gerade Werte), hinterlegt
 % je ein Binärbild in R, G, B (LSB), und speichert das Ergebnis.
 

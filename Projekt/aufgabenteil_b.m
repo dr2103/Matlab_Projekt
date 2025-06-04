@@ -1,11 +1,11 @@
-% Datei: evenisiere_graubild.m
 % Liest ein Graubild ein und rundet alle Grauwerte auf den nächstniedrigeren geraden Wert.
 
 % 1. Originales Graubild einlesen
-I_orig = imread('stuttgart_grau.png');  % vorausgesetzt: 8-Bit-Graubild
+I_orig = imread('stuttgart_grau.png');  
 
-% 2. 'Evenisieren': Alle Pixel auf den nächstniedrigeren geraden Wert runden
+% 2. Alle Pixel auf den nächstniedrigeren geraden Wert runden
 I_gerade = uint8(floor(double(I_orig) / 2) * 2);
+imwrite(I_gerade, 'Graubild_gerade.png');
 
 % 3. Histogramm: Original vs. gerade-Version
 figure;
