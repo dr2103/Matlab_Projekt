@@ -1,4 +1,4 @@
-% Aufgabe h) – Histogrammvergleich: Original vs. Mit LSB-Info
+% Histogrammvergleich: Original vs. Mit LSB-Info
 
 % 1. Originalfarbbild laden und Kanäle extrahieren
 I_orig = imread('stuttgart.jpg');

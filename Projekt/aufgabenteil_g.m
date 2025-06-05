@@ -1,6 +1,4 @@
-% Annahme: Die folgenden Variablen existieren bereits:
-% - R_even, G_even, B_even      ← nur gerade Farbkanäle (vor Einbetten)
-% - R_inf,  G_inf,  B_inf       ← Farbkanäle nach Einbetten (mit LSB-Änderung)
+% Vergleiche die Farbkanäle (R, G, B) vor dem Einbetten (nur gerade Werte) mit denen nach dem Einbetten (einzelne +1-Werte wegen Binärbilder)
 
 figure('Name','Histogrammvergleich: Gerade vs. Mit Info','Units','normalized','Position',[0.1 0.1 0.8 0.8]);
 
